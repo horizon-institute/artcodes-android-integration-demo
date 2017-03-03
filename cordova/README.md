@@ -9,20 +9,18 @@ $ cordova build android
 $ cordova run android --device
 ~~~~
 
+# Use the plugin in your project
+
 To add the Artcodes plugin to your Cordova app:
 ~~~~
 $ cordova plugin add https://github.com/horizon-institute/artcodes-cordova.git --save
 ~~~~
 To use:
 ~~~~
-$("#artcode1").on("click", 
-    function () { 
-        try {
-            Artcodes.scan(
-                { name: "Test Experience", actions: [{ codes: ["1:2:3:4"] }] }, 
-                function (marker) { alert(marker); }
-            ); 
-        } catch (err) { alert(err.message) }
-    }
-);
+try {
+    Artcodes.scan(
+        { name: "Test Experience", actions: [{ codes: ["1:2:3:4"] }] }, 
+        function (marker) { alert(marker); }
+    ); 
+} catch (err) { alert(err.message) }
 ~~~~
