@@ -1,7 +1,9 @@
 *.iml
-.gradle
-/local.properties
-/.idea
+android/.gradle
+android/local.properties
+android/.idea
 .DS_Store
-/build
-/captures
+android/build
+android/captures
+cordova/platforms
+cordova/plugins
